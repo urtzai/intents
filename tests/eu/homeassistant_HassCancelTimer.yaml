@@ -1,0 +1,36 @@
+language: eu
+tests:
+  - sentences:
+      - "bertan behera utzi tenporizadorea"
+      - "gelditu tenporizadorea"
+      - "ezeztatu nire tenporizadorea"
+    intent:
+      name: HassCancelTimer
+      slots: {}
+    response: "Tenporizadorea bertan behera utzita"
+
+  - sentences:
+      - "gelditu Sukaldeako tenporizadorea"
+      - "kendu Sukaldeako tenporizadorea"
+    intent:
+      name: HassCancelTimer
+      slots:
+        area: Sukaldea
+    response: "Tenporizadorea bertan behera utzita"
+
+  - sentences:
+      - "bertan behera utzi 10 minutuko tenporizadorea"
+      - "kendu 10 minutuko tenporizadorea"
+    intent:
+      name: HassCancelTimer
+      slots:
+        start_minutes: 10
+    response: "Tenporizadorea bertan behera utzita"
+
+  - sentences:
+      - "gelditu pizza izeneko tenporizadorea"
+    intent:
+      name: HassCancelTimer
+      slots:
+        name: "pizza"
+    response: "Tenporizadorea bertan behera utzita"

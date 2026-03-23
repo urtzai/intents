@@ -1,0 +1,15 @@
+language: eu
+responses:
+  intents:
+    HassStartTimer:
+      default: >
+        {% set h = slots.hours if slots.hours is defined else none %}
+        {% set m = slots.minutes if slots.minutes is defined else none %}
+        {% set s = slots.seconds if slots.seconds is defined else none %}
+        {% set h_text = h ~ (' ordu'  if h in [ "1", 'bat'] else ' ordu') if h else '' %}
+        {% set m_text = (30 if m in ['erdi', '1/2'] else m) ~ (' minutu' if m in [ "1", 'bat'] else ' minutu') if m else '' %}
+        {% set s_text = (30 if s in ['erdi', '1/2'] else s) ~ (' segundo' if s in [ "1", 'bat'] else ' segundo') if s else '' %}
+        {% set text_list = [ h_text, m_text, s_text] | select() | list %}
+        {% set text = text_list[:-1] | join(', ') ~ ' eta ' ~ text_list[-1] if text_list | count > 2 else text_list | join(' eta ') %}
+        {% set name = (' (' ~ slots.name | trim ~ ')') if slots.name is defined else '' %}
+        Tenporizadorea {{ text }}rako jarrita{{ name }}

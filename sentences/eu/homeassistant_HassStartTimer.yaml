@@ -1,0 +1,17 @@
+language: eu
+intents:
+  HassStartTimer:
+    data:
+      - sentences:
+          - "<timer_duration> tenporizadorea"
+          - "tenporizadorea <timer_duration>"
+          - "<timer_duration> tenporizadorea jarri"
+          - "jarri tenporizadorea <timer_duration>"
+          - "[jarri] <timer_duration> tenporizadore bat"
+          - "jarri <timer_duration> tenporizadore bat {timer_name:name} [izenarekin]"
+          - "{timer_name:name} [izeneko] tenporizadorea [jarri] <timer_duration>"
+          - "{timer_name:name} tenporizadorea [jarri] <timer_duration>"
+          - "<timer_duration> tenporizadorea {timer_name:name} [izenez]"
+          - "<timer_duration> tenporizadore bat jarri"
+          - "<timer_duration> tenporizadore bat {timer_name:name} [izenarekin]"
+        response: default

@@ -1,0 +1,46 @@
+language: eu
+tests:
+  - sentences:
+      - "10 minutuko tenporizadorea"
+      - "tenporizadorea 10 minutuko"
+      - "10 minutuko tenporizadorea jarri"
+      - "jarri tenporizadorea 10 minutuko"
+      - "jarri 10 minutuko tenporizadore bat"
+      - "10 minutuko tenporizadore bat"
+    intent:
+      name: HassStartTimer
+      slots:
+        minutes: 10
+    response: "Tenporizadorea 10 minuturako jarrita"
+
+  - sentences:
+      - "jarri 10 minutuko tenporizadore bat pizza izenarekin"
+      - "10 minutuko tenporizadore bat pizza izenarekin"
+      - "pizza izeneko tenporizadorea jarri 10 minutuko"
+      - "pizza tenporizadorea jarri 10 minutuko"
+      - "10 minutuko tenporizadorea pizza izenez"
+    intent:
+      name: HassStartTimer
+      slots:
+        minutes: 10
+        name: "pizza"
+    response: "Tenporizadorea 10 minuturako jarrita (pizza)"
+
+  - sentences:
+      - "5 minutu eta 30 segundoko tenporizadore bat jarri"
+    intent:
+      name: HassStartTimer
+      context:
+        area: Egongela
+      slots:
+        minutes: 5
+        seconds: 30
+    response: "Tenporizadorea 5 minutu eta 30 segundorako jarrita"
+
+  - sentences:
+      - "1 orduko tenporizadorea"
+    intent:
+      name: HassStartTimer
+      slots:
+        hours: 1
+    response: "Tenporizadorea 1 ordurako jarrita"

@@ -1,0 +1,15 @@
+language: eu
+intents:
+  HassCancelTimer:
+    data:
+      - sentences:
+          - "bertan behera utzi tenporizadorea"
+          - "ezeztatu tenporizadorea"
+          - "kendu tenporizadorea"
+          - "gelditu tenporizadorea"
+          - "(bertan behera utzi|ezeztatu|kendu|gelditu) [nire] tenporizadorea"
+          - "(bertan behera utzi|ezeztatu|kendu|gelditu) <timer_start> tenporizadorea"
+          - "(bertan behera utzi|ezeztatu|kendu|gelditu) {timer_name:name} izeneko tenporizadorea"
+          - "(bertan behera utzi|ezeztatu|kendu|gelditu) {timer_name:name} tenporizadorea"
+          - "(bertan behera utzi|ezeztatu|kendu|gelditu) {area}ko tenporizadorea"
+        response: default
