@@ -1,0 +1,50 @@
+language: eu
+tests:
+  - sentences:
+      - "tenporizadorearen egoera"
+      - "tenporizadoreen egoera"
+      - "nire tenporizadoreen egoera"
+      - "zenbat denbora geratzen zaio tenporizadoreari"
+      - "zenbat denbora geratzen zaie nire tenporizadorearei"
+      - "zenbat denbora falta da tenporizadorearentzat"
+      - "zenbat denbora falta da nire tenporizadorearentzako"
+    intent:
+      name: HassTimerStatus
+    response: "2 tenporizadore martxan. Tenporizadore bat pausatuta. 3 minutu geratzen dira 5 minutuko sukaldeako tenporizadorean."
+
+  - sentences:
+      - "1 orduko tenporizadorearen egoera"
+      - "zenbat denbora geratzen zaio 1 orduko tenporizadoreari"
+      - "zenbat denbora geratzen zaio nire 1 orduko tenporizadoreari"
+      - "zenbat denbora falta da 1 orduko tenporizadorearentzat"
+      - "zenbat denbora falta da nire 1 orduko tenporizadorearentzako"
+    intent:
+      name: HassTimerStatus
+      slots:
+        start_hours: 1
+    response: "Tenporizadorea pausatuta dago. minutu 1 eta 40 segundo geratzen dira."
+
+  - sentences:
+      - "pizza tenporizadorearen egoera"
+      - "pizza izeneko tenporizadorearen egoera"
+      - "zenbat denbora geratzen zaio pizza tenporizadoreari"
+      - "zenbat denbora geratzen zaio nire pizza tenporizadoreari"
+      - "zenbat denbora falta da pizza tenporizadorearentzat"
+      - "zenbat denbora falta da nire pizza tenporizadorearentzako"
+    intent:
+      name: HassTimerStatus
+      slots:
+        name: "pizza"
+    response: "25 minutu geratzen dira."
+
+  - sentences:
+      - "Sukaldeako tenporizadorearen egoera"
+      - "zenbat denbora geratzen zaio Sukaldeako tenporizadoreari"
+      - "zenbat denbora geratzen zaio nire Sukaldeako tenporizadoreari"
+      - "zenbat denbora falta da Sukaldeako tenporizadorearentzat"
+      - "zenbat denbora falta da nire Sukaldeako tenporizadorearentzako"
+    intent:
+      name: HassTimerStatus
+      slots:
+        area: Sukaldea
+    response: "3 minutu geratzen dira."

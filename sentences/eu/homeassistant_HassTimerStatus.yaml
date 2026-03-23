@@ -1,0 +1,26 @@
+language: eu
+intents:
+  HassTimerStatus:
+    data:
+      - sentences:
+          - "tenporizadorearen egoera"
+          - "tenporizadoreen egoera"
+          - "[nire] tenporizadoreen egoera"
+          - "<timer_start> tenporizadorearen egoera"
+          - "{area}ko tenporizadorearen egoera"
+          - "{timer_name:name} tenporizadorearen egoera"
+          - "{timer_name:name} izeneko tenporizadorearen egoera"
+        required_keywords:
+          - "egoera"
+      - sentences:
+          - "zenbat denbora geratzen [zaio|zaie] [nire] tenporizadorea[ri|rei]"
+          - "zenbat denbora geratzen zaio [nire] <timer_start> tenporizadoreari"
+          - "zenbat denbora geratzen zaio [nire] {area}ko tenporizadoreari"
+          - "zenbat denbora geratzen zaio [nire] {timer_name:name} tenporizadoreari"
+          - "zenbat denbora falta da [nire] tenporizadorea[rentzat|rentzako]"
+          - "zenbat denbora falta da [nire] <timer_start> tenporizadorea[rentzat|rentzako]"
+          - "zenbat denbora falta da [nire] {area}ko tenporizadorea[rentzat|rentzako]"
+          - "zenbat denbora falta da [nire] {timer_name:name} tenporizadorea[rentzat|rentzako]"
+        required_keywords:
+          - "denbora"
+        response: default

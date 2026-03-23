@@ -2,4 +2,22 @@ language: eu
 intents:
   HassClimateGetTemperature:
     data:
-      - sentences: []
+      - sentences:
+          - "zein da tenperatura"
+          - "ze tenperatura [dago]"
+          - "zenbat gradu daude"
+          - "zein da [hemen|hemengo] tenperatura"
+          - "ze tenperatura dago [hemen]"
+        requires_context:
+          area:
+            slot: true
+      - sentences:
+          - "zein da {area}ko tenperatura"
+          - "zein da {name}ren tenperatura"
+          - "zein da tenperatura {area}n"
+          - "zein da tenperatura {name}n"
+          - "ze tenperatura dago {area}n"
+          - "ze tenperatura dauka {name}k"
+          - "zenbat gradu daude {area}n"
+          - "{area}ko tenperatura zein da"
+        response: default

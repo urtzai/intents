@@ -1,6 +1,39 @@
 language: eu
 tests:
-  - sentences: []
+  - sentences:
+      - "zein da tenperatura"
+      - "ze tenperatura dago"
+      - "ze tenperatura"
+      - "zein da hemen tenperatura"
+      - "zein da hemengo tenperatura"
+      - "ze tenperatura dago hemen"
+      - "zenbat gradu daude"
     intent:
       name: HassClimateGetTemperature
-      slots: {}
+      context:
+        area: Logela
+      slots:
+        area: Logela
+    response: "20 gradu"
+
+  - sentences:
+      - "zein da Egongelako tenperatura"
+      - "Egongelako tenperatura zein da"
+      - "ze tenperatura dago Egongelan"
+      - "zein da tenperatura Egongelan"
+      - "zenbat gradu daude Egongelan"
+    intent:
+      name: HassClimateGetTemperature
+      slots:
+        area: Egongela
+    response: "22 gradu"
+
+  - sentences:
+      - "zein da Logelako termostatoaren tenperatura"
+      - "zein da tenperatura Logelako termostatoan"
+      - "ze tenperatura dauka Logelako termostatoak"
+    intent:
+      name: HassClimateGetTemperature
+      slots:
+        name: "Logelako termostatoa"
+    response: "20 gradu"

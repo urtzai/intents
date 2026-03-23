@@ -111,3 +111,40 @@ entities:
   - name: "Zereginak"
     id: "todo.zereginak"
     state: ""
+
+timers:
+  - is_active: false
+    start_hours: 1
+    total_seconds_left: 100
+    rounded_hours_left: 0
+    rounded_minutes_left: 1
+    rounded_seconds_left: 40
+  - name: "pizza"
+    start_minutes: 30
+    total_seconds_left: 1505
+    rounded_hours_left: 0
+    rounded_minutes_left: 25
+    rounded_seconds_left: 0
+  - area: "sukaldea_id"
+    start_minutes: 5
+    total_seconds_left: 190
+    rounded_hours_left: 0
+    rounded_minutes_left: 3
+    rounded_seconds_left: 0
+
+entities:
+  - name: "Logelako termostatoa"
+    id: "climate.logelako_termostatoa"
+    area: "logela_id"
+    state: "20"
+    attributes:
+      current_temperature: 20
+      unit_of_measurement: "°C"
+
+  - name: "Egongelako termostatoa"
+    id: "climate.egongelako_termostatoa"
+    area: "egongela_id"
+    state: "22"
+    attributes:
+      current_temperature: 22
+      unit_of_measurement: "°C"
