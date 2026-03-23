@@ -1,0 +1,15 @@
+language: eu
+tests:
+  - sentences:
+      - "gehitu sagarrak nire Trader Joe's zerrendara"
+      - "sagarrak gehitu Trader Joe's zerrendan"
+      - "sartu sagarrak Trader Joe's"
+      - "sagarrak sartu Trader Joe's zerrendan"
+      - "Trader Joe's zerrendara gehitu sagarrak"
+      - "Trader Joe's zerrendan sartu sagarrak"
+    intent:
+      name: HassListAddItem
+      slots:
+        item: "sagarrak"
+        name: "Trader Joe's"
+    response: "sagarrak gehituta"

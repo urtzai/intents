@@ -9,6 +9,8 @@ responses:
     handle_error: "Espero ez zen errore bat gertatu da agindua prozesatzean"
 
 lists:
+  todo_list_item:
+    wildcard: true
   color:
     values:
       - in: "zuria"

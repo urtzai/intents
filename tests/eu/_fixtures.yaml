@@ -99,3 +99,15 @@ entities:
     state: "28"
     attributes:
       unit_of_measurement: "°C"
+
+  - name: "Trader Joe's"
+    id: "todo.trader_joes"
+    state: ""
+
+  - name: "Erosketak"
+    id: "todo.erosketak"
+    state: ""
+
+  - name: "Zereginak"
+    id: "todo.zereginak"
+    state: ""

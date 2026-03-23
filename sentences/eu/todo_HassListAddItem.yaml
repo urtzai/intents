@@ -1,0 +1,17 @@
+language: eu
+intents:
+  HassListAddItem:
+    data:
+      - sentences:
+          - "gehitu <item> <my_list>"
+          - "<item> gehitu <my_list>"
+          - "sartu <item> <my_list>"
+          - "<item> sartu <my_list>"
+          - "<my_list> gehitu <item>"
+          - "<my_list> sartu <item>"
+        response: item_added
+        requires_context:
+          domain: todo
+        expansion_rules:
+          my_list: "[nire] {name} [zerrenda|zerrendan|zerrendara]"
+          item: "{todo_list_item:item}"

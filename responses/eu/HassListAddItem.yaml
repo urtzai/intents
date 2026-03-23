@@ -1,0 +1,6 @@
+language: eu
+responses:
+  intents:
+    HassListAddItem:
+      default: "{{ slots.item }} gehituta"
+      item_added: "{{ slots.item }} gehituta"
